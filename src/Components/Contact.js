@@ -33,6 +33,7 @@ import { BsInstagram } from "react-icons/fi";
 import { SiGmail } from "react-icons/si";
 import { FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Homepage from "./Homepage";
 const containerVariants = {
   hidden: {
     opacity: 0,
@@ -65,136 +66,8 @@ const Contact = () => {
     });
 
   return (
-    <motion.div
-      className="fixed-top2 bg-defalut-one2 "
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="grand-parents">
-        <nav className="navbar navbar-expand-lg">
-          <div className="d-flex justify-content-around w-100">
-            <img
-              className="jy-logo  mx-auto ms-3"
-              src={require("../Components/images/logo_2 1.png")}
-              alt="React Logo"
-            />
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon mx-3"></span>
-            </button>
-          </div>
-          <div
-            className="w-100 collapse navbar-collapse mx-auto "
-            id="navbarNav"
-          >
-            <ul className="navbar-nav active mx-1 mx-auto">
-              <li className="nav-item">
-                <a
-                  class="nav-link "
-                  href="/jyacademy"
-                  style={{ fontWeight: "" }}
-                >
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  class="nav-link "
-                  href="/OncampusProgram"
-                  style={{ fontWeight: "" }}
-                >
-                  About
-                </a>
-              </li>
-              <li className="nav-item nav-link ">
-                <div class="dropdown">
-                  <button
-                    class="dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Services
-                  </button>
-                  <ul class="p-2 dropdown-menu">
-                    <li className="m-0 p-0 w-100">
-                      <a class="m-0  dropdown-item" href="/AuditAssurance">
-                        Audit & Assurance
-                      </a>
-                    </li>
-                    <li className="m-0 p-0 w-100">
-                      <a
-                        class="m-0 dropdown-item"
-                        type="button"
-                        href="/Taxation"
-                      >
-                        Taxation
-                      </a>
-                    </li>
-                    <li className="m-0 p-0 w-100">
-                      <a
-                        class="m-0 dropdown-item"
-                        type="button"
-                        href="/BusinessSupport"
-                      >
-                        Business Support
-                      </a>
-                    </li>
-                    <li className="m-0 p-0 w-100">
-                      <a
-                        class="m-0 dropdown-item"
-                        href="/ManagementConsultancy"
-                      >
-                        Management Consultancy
-                      </a>
-                    </li>
-                    <li className="m-0 p-0 w-100">
-                      <a
-                        class="m-0 dropdown-item"
-                        type="button"
-                        href="/InternationalTransections"
-                      >
-                        International Transections
-                      </a>
-                    </li>
-                    <li className="m-0 p-0 w-100">
-                      <a
-                        class="m-0 dropdown-item"
-                        type="button"
-                        href="/NewBusinessSupport"
-                      >
-                        New Business Support
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li className="nav-item">
-                <a
-                  class="nav-link "
-                  href="/CrashCourse"
-                  style={{ fontWeight: "" }}
-                >
-                  Careers
-                </a>
-              </li>
-              <li className="nav-item">
-                <a class="nav-link " href="/Contact" style={{ fontWeight: "" }}>
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+    <>
+      <Homepage />
       <div className="grand-parents margin-top">
         <div className="d-flex justify-content-between parents">
           <div className="font-weight-bolder w-100">
@@ -698,7 +571,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </>
   );
 };
 export default Contact;

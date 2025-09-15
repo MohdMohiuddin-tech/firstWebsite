@@ -14,7 +14,7 @@ import {  Route, Routes } from "react-router-dom";
 import OncampusProgram from "./Components/OncampusProgram";
 import AuditAssurance from "./Components/AuditAssurance";
 import CrashCourse from "./Components/CrashCourse";
-import NavBar from "./Components/NavBar";
+import HomePage from "./Components/Homepage";
 import Taxation from "./Components/Taxation";
 import InternationalTransections from "./Components/InternationalTransections";
 import ManagementConsultancy from "./Components/ManagementConsultancy";
@@ -30,21 +30,27 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <HashRouter>
-      <Routes>
-        <Route  path="/" element={<NavBar />} />
-        <Route path="/OncampusProgram" element={<OncampusProgram />} />
-        <Route path="/CrashCourse" element={<CrashCourse />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/AuditAssurance" element={<AuditAssurance />} />
-        <Route path="/Taxation" element={<Taxation />} />
-        <Route path="/BusinessSupport" element={<BusinessSupport />} />
-        <Route path="/ManagementConsultancy" element={<ManagementConsultancy />}/>
-       <Route path="/InternationalTransections" element={<InternationalTransections />} />
-        <Route path="/NewBusinessSupport" element={<NewBusinessSupport />} />
-        <Route path="/WhatWeDo" element={<WhatWeDo />} />
-        <Route path="/WhoWeServe" element={<WhoWeServe />} />
-        <Route path="/WhoWeAre" element={<WhoWeAre />} />
-        <Route path="/Careers" element={<Careers />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/OncampusProgram" element={<OncampusProgram />} />
+      <Route path="/CrashCourse" element={<CrashCourse />} />
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/AuditAssurance" element={<AuditAssurance />} />
+      <Route path="/Taxation" element={<Taxation />} />
+      <Route path="/BusinessSupport" element={<BusinessSupport />} />
+      <Route
+        path="/ManagementConsultancy"
+        element={<ManagementConsultancy />}
+      />
+      <Route
+        path="/InternationalTransections"
+        element={<InternationalTransections />}
+      />
+      <Route path="/NewBusinessSupport" element={<NewBusinessSupport />} />
+      <Route path="/WhatWeDo" element={<WhatWeDo />} />
+      <Route path="/WhoWeServe" element={<WhoWeServe />} />
+      <Route path="/WhoWeAre" element={<WhoWeAre />} />
+      <Route path="/Careers" element={<Careers />} />
+    </Routes>
   </HashRouter>
 );

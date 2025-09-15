@@ -17,7 +17,7 @@ import {
   DropdownItem,
 } from "reactstrap";
 import { Button } from "reactstrap";
-import  { Fragment } from "react";
+import { Fragment } from "react";
 import Taxation from "../Components/Taxation";
 import BusinessSupport from "../Components/BusinessSupport";
 import WhoWeAre from "../Components/WhoWeAre";
@@ -25,19 +25,18 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const containerVariants = {
-hidden:{
-  opacity:0
-},
-visible:{
-  opacity:1,
-  transition:{
-    type:"spring",
-    delay:0.5,
-    when:"beforeChildren"
-
-  }
-}
-}
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      delay: 0.5,
+      when: "beforeChildren",
+    },
+  },
+};
 const childVariants = {
   hidden: {
     opacity: 0,
@@ -46,7 +45,7 @@ const childVariants = {
     opacity: 1,
   },
 };
-const NavBar = () => {
+const HomePage = () => {
   const { t } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
@@ -97,10 +96,10 @@ const NavBar = () => {
               <li className="nav-item">
                 <NavLink
                   className="nav-link"
-                  to="/"
+                  to="/HomePage"
                   style={{ fontWeight: "" }}
                 >
-                  {t('home')}
+                  {t("home")}
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -109,7 +108,7 @@ const NavBar = () => {
                   to="/OncampusProgram"
                   style={{ fontWeight: "" }}
                 >
-                  {t('about')}
+                  {t("about")}
                 </NavLink>
               </li>
               <li className="nav-item nav-link ">
@@ -120,7 +119,7 @@ const NavBar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    {t('services')}
+                    {t("services")}
                   </button>
                   <ul className="p-2 dropdown-menu">
                     <li className="m-0 p-0 w-100">
@@ -128,15 +127,12 @@ const NavBar = () => {
                         className="m-0 dropdown-item"
                         to="/AuditAssurance"
                       >
-                        {t('auditAssurance')}
+                        {t("auditAssurance")}
                       </NavLink>
                     </li>
                     <li className="m-0 p-0 w-100">
-                      <NavLink
-                        className="m-0 dropdown-item"
-                        to="/Taxation"
-                      >
-                        {t('taxation')}
+                      <NavLink className="m-0 dropdown-item" to="/Taxation">
+                        {t("taxation")}
                       </NavLink>
                     </li>
                     <li className="m-0 p-0 w-100">
@@ -144,7 +140,7 @@ const NavBar = () => {
                         className="m-0 dropdown-item"
                         to="/BusinessSupport"
                       >
-                        {t('businessSupport')}
+                        {t("businessSupport")}
                       </NavLink>
                     </li>
                     <li className="m-0 p-0 w-100">
@@ -152,7 +148,7 @@ const NavBar = () => {
                         className="m-0 dropdown-item"
                         to="/ManagementConsultancy"
                       >
-                        {t('managementConsultancy')}
+                        {t("managementConsultancy")}
                       </NavLink>
                     </li>
                     <li className="m-0 p-0 w-100">
@@ -160,7 +156,7 @@ const NavBar = () => {
                         className="m-0 dropdown-item"
                         to="/InternationalTransections"
                       >
-                        {t('internationalTransactions')}
+                        {t("internationalTransactions")}
                       </NavLink>
                     </li>
                     <li className="m-0 p-0 w-100">
@@ -168,7 +164,7 @@ const NavBar = () => {
                         className="m-0 dropdown-item"
                         to="/NewBusinessSupport"
                       >
-                        {t('newBusinessSupport')}
+                        {t("newBusinessSupport")}
                       </NavLink>
                     </li>
                   </ul>
@@ -180,7 +176,7 @@ const NavBar = () => {
                   href="/CrashCourse"
                   style={{ fontWeight: "" }}
                 >
-                  {t('careers')}
+                  {t("careers")}
                 </a>
               </li>
               <li className="nav-item">
@@ -189,7 +185,7 @@ const NavBar = () => {
                   href="/Contact"
                   style={{ fontWeight: "" }}
                 >
-                  {t('contact')}
+                  {t("contact")}
                 </a>
               </li>
             </ul>
@@ -202,7 +198,7 @@ const NavBar = () => {
             className="font-weight-bolder1 text-white"
             style={{ height: "100%" }}
           >
-            {t('heroTitle')}
+            {t("heroTitle")}
           </h1>
         </div>
       </div>
@@ -241,7 +237,7 @@ const NavBar = () => {
                   }}
                   variants={childVariants}
                 >
-                  {t('whoWeAre')}
+                  {t("whoWeAre")}
                 </motion.h3>
               </a>
             </motion.div>
@@ -277,7 +273,7 @@ const NavBar = () => {
                   }}
                   variants={childVariants}
                 >
-                  {t('whatWeDo')}
+                  {t("whatWeDo")}
                 </motion.h3>
               </a>
             </motion.div>
@@ -314,7 +310,7 @@ const NavBar = () => {
                   }}
                   variants={childVariants}
                 >
-                  {t('whoWeServe')}
+                  {t("whoWeServe")}
                 </motion.h3>
               </a>
             </motion.div>
@@ -325,4 +321,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default HomePage;
